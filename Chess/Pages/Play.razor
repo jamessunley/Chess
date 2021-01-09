@@ -1,0 +1,23 @@
+﻿@page "/play"
+
+<h1>Play</h1>
+
+<p>Current Game: @gameType</p>
+
+<button class="btn btn-primary" @onclick="TwoPlayer">2 Player</button>
+<button class="btn btn-primary" @onclick="SinglePlayer">Play AI</button>
+
+@code {
+    private string gameType = "Select Game Type";
+
+
+    private void SinglePlayer()
+    {
+        gameType = "Play AI";
+    }
+
+    private void TwoPlayer()
+    {
+        gameType = "2 Player Game";
+    }
+}
